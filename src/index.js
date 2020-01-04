@@ -1,4 +1,10 @@
 import './index.less';
+/*
+Ограничить максимальную длину символов
+Добавить оставшийся алфавит
+Учесть смену регистра 
+Разбить на модули
+ */
 const textArea = document.getElementById("mtk-coder");
 const button = document.getElementById("mtk-action");
 const about = document.getElementById("about");

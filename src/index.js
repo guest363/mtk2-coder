@@ -1,3 +1,5 @@
+/* @TODO
+Выбрасывать ошибку если символа нет в алфавитах */
 import './index.less';
 import {
     textArea,

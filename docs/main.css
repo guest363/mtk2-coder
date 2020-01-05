@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  max-width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-row-gap: 1em;
+  grid-auto-rows: min-content;
+}
+footer {
+  position: relative;
+  width: auto;
+  height: 5vh;
+}
+#mtk-draw {
+  max-width: 100%;
+}
+

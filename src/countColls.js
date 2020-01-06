@@ -4,9 +4,12 @@ export default msg => {
     let currentAlfabet_mutable = 0;
     let drawPosition = 1;
     const selectAlfabet = (position, item) => {
+        if (position > 5) {
+            throw new Error(item);
+        }
         if (ALFABETS[alfabetIter[position % 4]].hasOwnProperty(item)) {
             if (item === ' ' || item === '\r' || item === '\n') {
-                return 'skip'
+                return '';
             }
             else if (position % 4 !== currentAlfabet_mutable) {
                 drawPosition = drawPosition + 1;

@@ -14,10 +14,18 @@ import countColls from './countColls';
 
 function init() {
     const onInput = () => {
-        const collsCount = countColls(textArea.value.toUpperCase());
-        const ctx = drawFeild(collsCount, canvas);
-        drawColls(textArea.value.toUpperCase(), ctx);
-        createDownloadButton(downloadImg, canvas);
+        try {
+            const collsCount = countColls(textArea.value.toUpperCase());
+            const ctx = drawFeild(collsCount, canvas);
+            drawColls(textArea.value.toUpperCase(), ctx);
+            createDownloadButton(downloadImg, canvas);
+        } catch (error) {
+            let h2 = document.createElement('h2');
+            h2.innerHTML = `Cимвол "${error.toString().split(' ')[1]}" не поддерживается кодировкой МТК-2!
+             <br> Для новой попытке обновите страницу.`;
+            canvas.parentNode.replaceChild(h2, canvas);
+            console.log(error)
+        }
     }
     button.addEventListener('click', onInput);
 }

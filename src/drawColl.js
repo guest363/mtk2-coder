@@ -1,4 +1,6 @@
-
+/**
+ * @description Рисует один символ на перфоленте
+ *  */  
 import { ROWS } from './constants';
 export default (type, orderNumber, ctx, alfabet) => {
     alfabet[type].map((item, index) => {

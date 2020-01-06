@@ -1,19 +1,18 @@
-/* @TODO
-Выбрасывать ошибку если символа нет в алфавитах */
 import './index.less';
 import {
     textArea,
     button,
-    downloadImg,
-    canvas
+    downloadImg
 } from './dom-selectors';
 import drawFeild from './drawFeild';
 import createDownloadButton from './createDownloadButton';
+import createUpdateButton from './createUpdateButton';
 import drawColls from './drawColls';
 import countColls from './countColls';
 
 function init() {
     const onInput = () => {
+        const canvas = document.getElementById(`mtk-draw`);
         try {
             const collsCount = countColls(textArea.value.toUpperCase());
             const ctx = drawFeild(collsCount, canvas);
@@ -21,10 +20,10 @@ function init() {
             createDownloadButton(downloadImg, canvas);
         } catch (error) {
             let h2 = document.createElement('h2');
-            h2.innerHTML = `Cимвол "${error.toString().split(' ')[1]}" не поддерживается кодировкой МТК-2!
-             <br> Для новой попытке обновите страницу.`;
+            h2.id = 'alert';
+            h2.innerHTML = `Cимвол "${error.toString().split(' ')[1]}" не поддерживается кодировкой МТК-2!`;
             canvas.parentNode.replaceChild(h2, canvas);
-            console.log(error)
+            createUpdateButton(downloadImg);
         }
     }
     button.addEventListener('click', onInput);

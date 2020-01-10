@@ -1,9 +1,8 @@
 import drawColl from "./drawColl";
 import ALFABETS from "./alfabets";
-import { ROWS } from './constants';
+import { ROWS, alfabetIter } from './constants';
 
 export default (msg, ctx) => {
-    const alfabetIter = ['RUS', "LAT", "DIG", "SPE"];
     let currentAlfabet_mutable = 0;
     let drawPosition = 0;
     const drawSpec = spec => {
@@ -22,7 +21,7 @@ export default (msg, ctx) => {
         if (ALFABETS[alfabetIter[position % 4]].hasOwnProperty(item)) {
             if (item === ' ' || item === '\r' || item === '\n') {
                 drawSpec(item);
-                return 'skip'
+                return 'skip';
             }
             else if (position % 4 !== currentAlfabet_mutable) {
                 drawSpec(alfabetIter[position % 4]);

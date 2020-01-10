@@ -1,7 +1,11 @@
 import { textArea } from './dom-selectors';
-
-const update = event => {
-    event.target.parentNode.removeChild(event.target);
+/**
+ * Создает кнопку для возврата страницы в исходное состояние
+ * @param {Element} feild где создать кнопку
+ * @param {Element} canvas 
+*/
+const update = feild => {
+    feild.target.parentNode.removeChild(feild.target);
     textArea.value = '';
     let canvasNew = document.createElement('canvas');
     canvasNew.id = `mtk-draw`;

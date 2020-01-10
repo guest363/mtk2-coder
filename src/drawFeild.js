@@ -1,3 +1,6 @@
+/**
+ * @description Рисует поле, перфоленту
+ */
 export default (count, canvas) => {
     let ctx = canvas.getContext('2d');
     canvas.width = count * 40 + 70;

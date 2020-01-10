@@ -1,2 +1,5 @@
-export const WIDTH = window.innerWidth - (window.innerWidth * 0.1);
+
+/**
+ * Положение точек одной колонки на canvas и итератор для алфавитов */  
 export const ROWS = [80, 110, 145, 180, 210, 240];
+export const alfabetIter = ['RUS', "LAT", "DIG", "SPE"];

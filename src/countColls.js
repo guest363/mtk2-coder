@@ -4,7 +4,8 @@ import { alfabetIter } from './constants';
  * Считает сколько нужно зарезервировать место, какой длины создать canvas,
  * с учетом специальных символок, которых нет явно в введенном тексте
  * @param {String} msg введенное сообщение
- * @returns {Number} число столбцов*/
+ * @returns {Number} число столбцов
+ */
 export default msg => {
     let currentAlfabet_mutable = 0;
     let drawPosition = 1;

@@ -9,32 +9,32 @@
 
   <body class="body">
     <div id="mtk-wrapper">
-      <header>
-        <h2>
-          Переводит текст в телеграфный код
-          <span class="tooltip"
-            >МТК-2.
-            <span class="tooltiptext">
-              Телеграфный трёхрегистровый код МТК-2 был принят в СССР в 1963
-              году.<br /><br />
-              Код 5-битовый (всего 32 разных комбинации), поэтому используются 3
-              разных регистра (русский, латинский, цифры), переключаемые
-              управляющими символами РУС, ЛАТ, ЦИФ. Букв Ъ и Ё нет; <br /><br />
-              Вместо буквы Ч использовали цифру 4
+      <div id="mtk-content">
+        <header>
+          <h2>
+            Переводит текст в телеграфный код
+            <span class="tooltip"
+              >МТК-2.
+              <span class="tooltiptext">
+                Телеграфный трёхрегистровый код МТК-2 был принят в СССР в 1963
+                году.<br /><br />
+                Код 5-битовый (всего 32 разных комбинации), поэтому используются
+                3 разных регистра (русский, латинский, цифры), переключаемые
+                управляющими символами РУС, ЛАТ, ЦИФ. Букв Ъ и Ё нет;
+                <br /><br />
+                Вместо буквы Ч использовали цифру 4
+              </span>
             </span>
-          </span>
-        </h2>
-      </header>
-      <textarea
-        id="mtk-coder"
-        rows="1"
-        placeholder="Текст для кодирования"
-      ></textarea>
-      <canvas id="mtk-draw"></canvas>
-      <div id="download"></div>
-      <footer>
-        <span id="about"></span>
-      </footer>
+          </h2>
+        </header>
+        <textarea
+          id="mtk-coder"
+          rows="1"
+          placeholder="Текст для кодирования"
+        ></textarea>
+        <canvas id="mtk-draw"></canvas>
+        <div id="download"></div>
+      </div>
     </div>
   </body>
 </html>

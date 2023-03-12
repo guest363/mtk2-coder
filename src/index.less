@@ -112,3 +112,31 @@ a {
     height: 15px;
   }
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dashed white;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  max-width: 30vw;
+  background-color: #363636;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 50vw;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

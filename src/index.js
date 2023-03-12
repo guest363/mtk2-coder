@@ -1,9 +1,9 @@
-import ALFABETS from "./alphabets";
-import countColls from "./count-colls";
+import ALPHABETS from "./alphabets";
+import countColumns from "./count-columns";
 import createDownloadButton from "./create-download-button";
 import { downloadImg, textArea } from "./dom-selectors";
-import drawColls from "./draw-colls";
-import drawFeild from "./draw-feild";
+import drawColumns from "./draw-columns";
+import drawField from "./draw-feild";
 import "./index.less";
 import { initObserve } from "./text-area-resize";
 
@@ -13,13 +13,13 @@ function init(textArea) {
     const canvas = document.getElementById(`mtk-draw`);
     // Заменить Ч, Ъ, Ё
     const textAreaSymbols = [...textArea.value.toUpperCase()].map((symbol) => {
-      if (ALFABETS.REPLACE[symbol]) return ALFABETS.REPLACE[symbol];
+      if (ALPHABETS.REPLACE[symbol]) return ALPHABETS.REPLACE[symbol];
       return symbol;
     });
     try {
-      const collsCount = countColls(textAreaSymbols);
-      const ctx = drawFeild(collsCount, canvas);
-      drawColls(textAreaSymbols, ctx);
+      const columnCount = countColumns(textAreaSymbols);
+      const ctx = drawField(columnCount, canvas);
+      drawColumns(textAreaSymbols, ctx);
       createDownloadButton(downloadImg, canvas);
     } catch (error) {
       textArea.value = textArea.value.slice(0, -1);

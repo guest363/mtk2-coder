@@ -12,7 +12,6 @@ if (window.attachEvent) {
 
 export function initObserve(textArea) {
   function resize() {
-    console.log(textArea.scrollHeight);
     textArea.style.height = "auto";
     textArea.style.height = textArea.scrollHeight + "px";
   }

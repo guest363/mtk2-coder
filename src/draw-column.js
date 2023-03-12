@@ -1,6 +1,6 @@
 import ALPHABETS from "./alphabets";
 import { alphabetIter, ROWS } from "./constants";
-import drawColl from "./draw-columns";
+import { drawSymbol } from "./draw-symbol";
 
 /* A function that draws a message on a canvas. */
 export default (msg, ctx) => {
@@ -35,7 +35,7 @@ export default (msg, ctx) => {
   msg.forEach((item) => {
     const alphabet = selectAlphabet(currentAlphabet_mutable, item);
     if (alphabet !== "skip") {
-      drawColl(item, drawPosition, ctx, alphabet);
+      drawSymbol(item, drawPosition, ctx, alphabet);
       drawPosition = drawPosition + 1;
     }
   });

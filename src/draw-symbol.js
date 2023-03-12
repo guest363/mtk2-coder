@@ -1,8 +1,9 @@
+import { ROWS } from "./constants";
+
 /**
  * @description Рисует один символ на перфоленте
  */
-import { ROWS } from "./constants";
-export const drawColumns = (type, orderNumber, ctx, alphabet) => {
+export const drawSymbol = (type, orderNumber, ctx, alphabet) => {
   alphabet[type].map((item, index) => {
     ctx.beginPath();
     ctx.fillStyle = "#FFFFFF";

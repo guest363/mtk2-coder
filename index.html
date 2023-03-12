@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Кодер в МТК-2</title>
-</head>
+  </head>
 
-<body class="body">
-    <header>
-        <h2>Переводит текст в телеграфный код МТК-2.
+  <body class="body">
+    <div id="mtk-wrapper">
+      <header>
+        <h2>
+          Переводит текст в телеграфный код
+          <span class="tooltip"
+            >МТК-2.
+            <span class="tooltiptext">
+              Телеграфный трёхрегистровый код МТК-2 был принят в СССР в 1963
+              году.<br /><br />
+              Код 5-битовый (всего 32 разных комбинации), поэтому используются 3
+              разных регистра (русский, латинский, цифры), переключаемые
+              управляющими символами РУС, ЛАТ, ЦИФ. Букв Ъ и Ё нет; <br /><br />
+              Вместо буквы Ч использовали цифру 4
+            </span>
+          </span>
         </h2>
-        <blockquote>Телеграфный трёхрегистровый код МТК-2 был принят в СССР в 1963 году.<br>
-            Код 5-битовый (всего 32 разных комбинации), поэтому используются 3 разных регистра
-            (русский, латинский, цифры), переключаемые управляющими символами РУС, ЛАТ, ЦИФ. Букв Ъ и Ё нет;<br>
-            Вместо буквы Ч использовали цифру 4.</blockquote>
-        <span id='about'>На выходе получается картинка, которую можно скачать.</span>
-    </header>
-    <textarea id="mtk-coder" cols="30" rows="5" placeholder="Текст для кодирования"></textarea>
-    <button id="mtk-action">Рисовать</button>
-    <canvas id="mtk-draw" style="border:1px solid #c3c3c3;">
-    </canvas>
-    <div id="download"></div>
-    <footer>
+      </header>
+      <textarea
+        id="mtk-coder"
+        rows="1"
+        placeholder="Текст для кодирования"
+      ></textarea>
+      <canvas id="mtk-draw"></canvas>
+      <div id="download"></div>
+      <footer>
         <span id="about"></span>
-    </footer>
-</body>
-
+      </footer>
+    </div>
+  </body>
 </html>
